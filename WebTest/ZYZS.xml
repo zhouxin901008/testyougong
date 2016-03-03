@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="ZYZS">
+    <classes>
+      <class name="ZYZS.WebTestingZYFB"/>
+      <class name="ZYZS.WebTestingZYBM"/>
+      <class name="ZYZS.WebTestingZYSH"/>
+      <class name="ZYZS.WebTestingZYBJ"/>
+      <class name="ZYZS.WebTestingZYPY"/>   
+    </classes>
+  </test> <!-- Test -->
+   <listeners>
+  	  <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>  
+</suite> <!-- Suite -->
