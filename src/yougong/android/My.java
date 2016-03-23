@@ -126,7 +126,7 @@ public class My extends AndroidBasic{
 		//进入意见反馈页面
 		wd.findElementsByClassName("android.widget.RelativeLayout").get(6).click();
 		Assert.assertTrue("“意见反馈”页面标题有问题",wd.findElementsByClassName("android.widget.TextView").get(0).getText().equals("意见反馈"));
-		wd.findElementByXPath("//android.view.View[1]/android.widget.ImageButton[1]").click();
+		wd.navigate().back();
 		
 		//检验检查更新文案
 		Assert.assertTrue("“检查更新”文案有问题",wd.findElementByXPath("//android.widget.RelativeLayout[7]/android.widget.TextView[1]").getText().equals("检查更新"));
