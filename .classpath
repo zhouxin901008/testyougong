@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="/Users/zhouxin/Documents/selenium-2.45.0/selenium-java-2.45.0-srcs.jar"/>
+	<classpathentry kind="lib" path="/Users/zhouxin/Documents/selenium-server-standalone-2.44.0.jar"/>
+	<classpathentry kind="lib" path="/Users/zhouxin/Documents/java-client-2.2.0.jar"/>
+	<classpathentry kind="lib" path="/Users/zhouxin/Documents/reportng-1.1.4/velocity-dep-1.4.jar"/>
+	<classpathentry kind="lib" path="/Users/zhouxin/Documents/reportng-1.1.4/reportng-1.1.4.jar"/>
+	<classpathentry kind="lib" path="/Users/zhouxin/Documents/guice-3.0.jar"/>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

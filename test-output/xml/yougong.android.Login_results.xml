@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="AndroidTest"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="37.426">
+  <properties />
+  
+  
+            <testcase name="logintest" time="37.426" classname="yougong.android.Login" />
+      
+</testsuite>
