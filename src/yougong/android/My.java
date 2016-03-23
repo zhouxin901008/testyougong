@@ -139,8 +139,7 @@ public class My extends AndroidBasic{
 		wd.findElementsByClassName("android.widget.RelativeLayout").get(8).click();
 		Assert.assertTrue("“关于链商”页面标题有问题",wd.findElementsByClassName("android.widget.TextView").get(0).getText().equals("关于"));
 	
-		wd.findElementByXPath("//android.view.View[1]/android.widget.ImageButton[1]").click();
-		
+		wd.navigate().back();
 		
 		
 	}
