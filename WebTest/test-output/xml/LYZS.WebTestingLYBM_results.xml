@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="LYZS"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="14.933">
+  <properties />
+  
+  
+            <testcase name="LYBJ" time="14.933" classname="LYZS.WebTestingLYBM" />
+      
+</testsuite>
