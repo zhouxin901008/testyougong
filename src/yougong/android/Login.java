@@ -1,6 +1,7 @@
 package yougong.android;
 
 import java.net.URL;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -11,6 +12,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import Basic.AndroidBasic;
+import Basic.ExcelWorkBook;
 import io.appium.java_client.android.AndroidDriver;
 
 public class Login extends AndroidBasic{	
@@ -46,21 +48,35 @@ public class Login extends AndroidBasic{
 		if(cellphone.getText()!="请输入手机号"){
 			clearText(cellphoneText);
 		}
-        cellphone.sendKeys("13466640320");
-        int a = (int) (Math.random()*100000);
-        password.sendKeys(""+a);
-        wd.findElementById("com.elianshang.yougong:id/login").click();
-        //waitForElement(By.partialLinkText("账户或者密码错误,请重新登录"),4,wd);
-        if(wd.findElementByClassName("android.widget.TextView").getText().equals("登录")){
-        	System.out.println("登录失败");
-        	AndroidBasic.takeScreenshots();
-        }
-        clearText(passwordText);
-        password.sendKeys("000000");
-        wd.findElementById("com.elianshang.yougong:id/login").click();
-        if(wd.findElementByClassName("android.widget.TextView").getText().equals("我的")){
-        	System.out.println("登录成功");
-        }
-	}
-
+		//初始化ExcelWorkBook Class
+		ExcelWorkBook excelbook=new ExcelWorkBook();
+		try{
+			//把取出的username放在userlist集合里面
+			List<String> userList=excelbook.readUsername("/Users/zhouxin/Documents/workspace/yougong/users.xls");
+			//把取出的password放在passlist集合里面
+			List<String> passList=excelbook.readPassword("/Users/zhouxin/Documents/workspace/yougong/users.xls");
+			//把取出来的值，输入到界面的输入框中
+			int usersize = userList.size();
+			int passsize = passList.size();
+			for(int i=0,j=0;i<usersize && j<passsize;i++,j++){
+				//从list中取cellphone，填写到cellphone输入框中
+				String phone=userList.get(i);
+				cellphone.sendKeys(phone);
+				//从list中取password，填写到password输入框中
+				String pass=passList.get(j);
+				password.sendKeys(pass);
+				//点击登录
+				wd.findElementById("com.elianshang.yougong:id/login").click();
+				if(wd.findElementByClassName("android.widget.TextView").getText().equals("登录")){
+					System.out.println("登录失败");
+					AndroidBasic.takeScreenshots();
+				}  
+				cellphone.clear();
+				password.clear();
+				}		
+		}
+		catch(Exception e){
+			e.printStackTrace();
+			}
+		}
 }

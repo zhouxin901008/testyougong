@@ -9,5 +9,6 @@
 	<classpathentry kind="lib" path="/Users/zhouxin/Documents/reportng-1.1.4/reportng-1.1.4.jar"/>
 	<classpathentry kind="lib" path="/Users/zhouxin/Documents/guice-3.0.jar"/>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="lib" path="/Users/zhouxin/Documents/jxl.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
