@@ -3,25 +3,41 @@ package Basic;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.ios.IOSDriver;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.apache.commons.io.FileUtils;
 
 public class AndroidBasic {
 	public static AndroidDriver wd;
+		public static void prepareAndroidForAppium() throws Exception{
+			DesiredCapabilities capabilities = new DesiredCapabilities();
+			capabilities.setCapability("deviceName", "SM_G9250");
+			capabilities.setCapability("platformVersion", "5.1.1");
+			capabilities.setCapability("platformName", "04157df47a9d263a");
+			capabilities.setCapability("Package", "com.elianshang.yougong");
+			capabilities.setCapability("Activity", "com.elianshang.yougong.ui.activity.WelcomeActivity");
+			capabilities.setCapability("unicodeKeyboard", "True");
+			capabilities.setCapability("resetKeyboard", "True");
+			wd = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
+			wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		}
+			
 		//判断元素是否存在
 		public static boolean isElementExist(By by){  
 		    try{
 		    	wd.findElement(by);
 		    	return true;
 		    }catch(Exception e){
+		    	e.printStackTrace();
 		        return false;  
 		    }                         
 		}

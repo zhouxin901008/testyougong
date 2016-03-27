@@ -21,27 +21,29 @@ public class ExcelWorkBook {
 	 */
 	public List<String> readUsername(String sourceString) throws IOException,Exception{
 		List<String> userList = new ArrayList<String>();
-			try {
-				Workbook book =Workbook.getWorkbook(new File("/Users/zhouxin/Documents/workspace/yougong/users.xls"));
-				Sheet sheet=book.getSheet(0);
-				//获取文件的行数
-				int rows=sheet.getRows();
-				//获取文件的列数
-				int cols=sheet.getColumns();
-				//获取第一行的数据，一般第一行为属性值，所以这里可以忽略
-				String col1=sheet.getCell(0,0).getContents().trim();
-				String col2=sheet.getCell(1,0).getContents().trim();
-				System.out.println(col1+","+col2);
-				//把第一列的值放在userlist中
-				for(int z=1;z<rows ;z++){
-					String username=sheet.getCell(0,z).getContents();
-					userList.add(username);
-				}
-			} catch (Exception e) {
-				e.printStackTrace();
+		try {
+			Workbook book =Workbook.getWorkbook(new File(sourceString));
+			Sheet sheet=book.getSheet(0);
+			//获取文件的行数
+			int rows=sheet.getRows();
+			//获取文件的列数
+			int cols=sheet.getColumns();
+			//获取第一行的数据，一般第一行为属性值，所以这里可以忽略
+			/*
+			String col1=sheet.getCell(0,0).getContents().trim();
+			String col2=sheet.getCell(1,0).getContents().trim();
+			System.out.println(col1+","+col2);
+			*/
+			//把第一列的值放在userlist中
+			for(int z=1;z<rows ;z++){
+				String username=sheet.getCell(0,z).getContents();
+				userList.add(username);
 			}
-			//把获取的值放回出去，方便调用
-			return userList;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		//把获取的值放回出去，方便调用
+		return userList;
 	}
 	/*
 	 * 获取excel文件第二列的值，这里取得值为password
@@ -49,7 +51,7 @@ public class ExcelWorkBook {
 	public List<String> readPassword(String sourceString) throws IOException,Exception{
 		List<String> passList = new ArrayList<String>();
 		try {
-			Workbook book =Workbook.getWorkbook(new File("/Users/zhouxin/Documents/workspace/yougong/users.xls"));
+			Workbook book =Workbook.getWorkbook(new File(sourceString));
 			Sheet sheet=book.getSheet(0);
 			int rows=sheet.getRows();
 			for(int z=1;z<rows ;z++){

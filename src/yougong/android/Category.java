@@ -1,15 +1,9 @@
 package yougong.android;
 
-import io.appium.java_client.android.AndroidDriver;
-
-import java.net.URL;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
-
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -20,16 +14,7 @@ public class Category extends AndroidBasic{
 	
 	@BeforeClass
 	public void setUp() throws Exception{
-		DesiredCapabilities capabilities = new DesiredCapabilities();
-		capabilities.setCapability("deviceName", "SM_G9250");
-		capabilities.setCapability("platformVersion", "5.1.1");
-		capabilities.setCapability("platformName", "04157df47a9d263a");
-		capabilities.setCapability("Package", "com.elianshang.yougong");
-		capabilities.setCapability("Activity", "com.elianshang.yougong.ui.activity.WelcomeActivity");
-		capabilities.setCapability("unicodeKeyboard", "True");
-		capabilities.setCapability("resetKeyboard", "True");
-		wd = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
-		wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		AndroidBasic.prepareAndroidForAppium();
 	}
 	
 	@AfterClass

@@ -1,33 +1,18 @@
 package yougong.android;
 
-import java.net.URL;
-import java.util.concurrent.TimeUnit;
-
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import Basic.AndroidBasic;
-import io.appium.java_client.android.AndroidDriver;
 
 public class My extends AndroidBasic{	
 	
 	@BeforeClass
 	public void setUp() throws Exception{
-		DesiredCapabilities capabilities = new DesiredCapabilities();
-		capabilities.setCapability("deviceName", "SM_G9250");
-		capabilities.setCapability("platformVersion", "5.1.1");
-		capabilities.setCapability("platformName", "04157df47a9d263a");
-		capabilities.setCapability("Package", "com.elianshang.yougong");
-		capabilities.setCapability("Activity", "com.elianshang.yougong.ui.activity.WelcomeActivity");
-		capabilities.setCapability("unicodeKeyboard", "True");
-		capabilities.setCapability("resetKeyboard", "True");
-		wd = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
-		wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		prepareAndroidForAppium();
 	}
 	
 	@AfterClass
@@ -55,6 +40,7 @@ public class My extends AndroidBasic{
 			wd.findElementById("com.elianshang.yougong:id/order_item_main").click();
 			Assert.assertTrue("“订单详情”页面标题有问题",wd.findElementsByClassName("android.widget.TextView").get(0).getText().equals("订单详情"));
 			String status = wd.findElementById("com.elianshang.yougong:id/order_detail_state_value").getText();
+			
 			switch(status){
 			case "待发货":
 				Assert.assertTrue("订单状态与取消订单按钮对应不上",AndroidBasic.isElementExist(By.id("com.elianshang.yougong:id/order_cancel_btn")));
@@ -81,6 +67,7 @@ public class My extends AndroidBasic{
 				System.out.println("订单状态异常");
 				AndroidBasic.takeScreenshots();
 			}
+			
 		}
 		else{
 			System.out.println("订单状态文案异常");
@@ -138,7 +125,6 @@ public class My extends AndroidBasic{
 		//进入关于链商页面
 		wd.findElementsByClassName("android.widget.RelativeLayout").get(8).click();
 		Assert.assertTrue("“关于链商”页面标题有问题",wd.findElementsByClassName("android.widget.TextView").get(0).getText().equals("关于"));
-	
 		wd.navigate().back();
 		
 		
