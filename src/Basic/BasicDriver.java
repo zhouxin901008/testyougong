@@ -16,10 +16,9 @@ import org.apache.commons.io.FileUtils;
 
 public class BasicDriver{
 	
-	public static WebDriver driver = new FirefoxDriver();
-	public static Navigation navigation = driver.navigate();	
+	public static WebDriver driver;
+	public static Navigation navigation;	
 	
-
 	//启动浏览器进入指定网址，最大化浏览器
 	public static void open() throws InterruptedException{
 		navigation.to("http://dev.market-mis.dev.lsh123.com");
