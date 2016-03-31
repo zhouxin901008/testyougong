@@ -5,7 +5,8 @@
   <test name="MisTest">
     <classes>
     <!-- <class name="Basic.Test"/>--> 
-     <class name="CommodityManagement.Items"/>  
+     <class name="com.mis.market.test.ItemSkuTest"/>
+     <class name="com.mis.market.test.ItemSaleTest"/>
     </classes>
   </test> <!-- Test -->
    <listeners>
