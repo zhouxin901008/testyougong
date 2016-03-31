@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="TestSuite">
+
+<suite name="TestSuite" verbose="1">
   <test name="MisTest">
     <classes>
-      <class name="mis.CommodityManagement.Items"/>
+    <!-- <class name="Basic.Test"/>--> 
+     <class name="CommodityManagement.Items"/>  
     </classes>
   </test> <!-- Test -->
    <listeners>
