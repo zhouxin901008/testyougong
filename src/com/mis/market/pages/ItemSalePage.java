@@ -29,11 +29,11 @@ public class ItemSalePage{
 		}
 		//筛选文案检查
 		public void filterCheck(){
-			Assert.assertTrue("销售管理页面'所有'筛选有问题", driver.findElement(By.xpath("//li[@data-value='0']")).getText().contains("所有"));
-			Assert.assertTrue("销售管理页面'新建'筛选有问题", driver.findElement(By.xpath("//li[@data-value='1']")).getText().contains("新建"));	
-			Assert.assertTrue("销售管理页面'下架'筛选有问题", driver.findElement(By.xpath("//li[@data-value='3']")).getText().contains("下架"));		
-			Assert.assertTrue("销售管理页面'上架'筛选有问题", driver.findElement(By.xpath("//li[@data-value='2']")).getText().contains("上架"));			
-			Assert.assertTrue("销售管理页面'价格异常'筛选有问题", driver.findElement(By.xpath("//li[@data-value='4']")).getText().contains("价格异常"));
+			Assert.assertTrue("'所有'筛选文案错误", driver.findElement(By.xpath("//li[@data-value='0']")).getText().contains("所有"));
+			Assert.assertTrue("'新建'筛选文案错误", driver.findElement(By.xpath("//li[@data-value='1']")).getText().contains("新建"));	
+			Assert.assertTrue("'下架'筛选文案错误", driver.findElement(By.xpath("//li[@data-value='3']")).getText().contains("下架"));		
+			Assert.assertTrue("'上架'筛选文案错误", driver.findElement(By.xpath("//li[@data-value='2']")).getText().contains("上架"));			
+			Assert.assertTrue("'价格异常'筛选文案错误", driver.findElement(By.xpath("//li[@data-value='4']")).getText().contains("价格异常"));
 		}
 		//销售列表数量检查
 		public void listCheck(){

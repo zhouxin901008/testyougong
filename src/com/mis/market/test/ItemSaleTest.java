@@ -41,6 +41,7 @@ public class ItemSaleTest {
 			itemsalepage.filter(2).click();
 			itemsalepage.filter(4).click();
 			itemsalepage.filterCheck();//筛选检查
+			itemsalepage.listCheck();//列表数量检查
 		}
 	}
 }

@@ -17,7 +17,7 @@ import org.apache.commons.io.FileUtils;
 public class BasicDriver{
 	
 	public static WebDriver driver;
-	public static Navigation navigation;	
+	public static  Navigation navigation;	
 	
 	//启动浏览器进入指定网址，最大化浏览器
 	public static void open() throws InterruptedException{

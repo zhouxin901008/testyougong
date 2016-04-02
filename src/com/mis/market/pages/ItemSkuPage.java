@@ -26,11 +26,13 @@ public class ItemSkuPage{
 		Thread.sleep(1000);
 	}
 	//添加商品搜索检查
-	public void insertSearchCheck(String sku_id) throws InterruptedException{
-		driver.findElement(By.xpath("//input[@type='text']")).sendKeys(sku_id);
+	public void insertSearchCheck(String item_id) throws InterruptedException{
+		driver.findElement(By.xpath("//input[@type='text']")).sendKeys(item_id);
 		driver.findElement(By.xpath("//button[@class='btn btn-primary']")).click();
 		Thread.sleep(1000);
-		Assert.assertEquals(sku_id,driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div/div[4]/table/tbody/tr/td[1]")).getText());
+		Assert.assertEquals(item_id,driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div/div[4]/table/tbody/tr/td[1]")).getText());
+		driver.navigate().back();
+		driver.navigate().back();
 	}
 	//商品列表筛选
 	public WebElement filter(int n) throws InterruptedException{
@@ -40,9 +42,9 @@ public class ItemSkuPage{
 	}
 	//商品列表筛选文案检查
 	public void filterCheck(){
-		Assert.assertTrue("全部商品页面'所有'筛选有问题", driver.findElement(By.xpath("//li[@data-value='0']")).getText().contains("所有"));
-		Assert.assertTrue("全部商品页面'新建'筛选有问题", driver.findElement(By.xpath("//li[@data-value='1']")).getText().contains("新建"));
-		Assert.assertTrue("全部商品页面'已编辑'筛选有问题", driver.findElement(By.xpath("//li[@data-value='2']")).getText().contains("已编辑"));
+		Assert.assertTrue("'所有'筛选文案错误", driver.findElement(By.xpath("//li[@data-value='0']")).getText().contains("所有"));
+		Assert.assertTrue("'新建'筛选文案错误", driver.findElement(By.xpath("//li[@data-value='1']")).getText().contains("新建"));
+		Assert.assertTrue("'已编辑'筛选文案错误", driver.findElement(By.xpath("//li[@data-value='2']")).getText().contains("已编辑"));
 	}
 	//商品列表商品数量检查
 	public void listCheck(){
