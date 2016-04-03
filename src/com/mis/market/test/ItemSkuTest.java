@@ -40,8 +40,8 @@ public class ItemSkuTest extends BasicDriver{
 		ExcelWorkBook excelbook = new ExcelWorkBook();
 		try{
 			List<String> sku_list = excelbook.readSkuId("/Users/zhouxin/Documents/workspace/mis/list.xls");
-			int skusize = sku_list.size();
-			for(int i=0;i<skusize;i++){
+			int sku_size = sku_list.size();
+			for(int i=0;i<sku_size;i++){
 				String item_id = sku_list.get(i);
 				itemskupage.insertSearchCheck(item_id);//check新增商品搜索
 			}
@@ -50,13 +50,34 @@ public class ItemSkuTest extends BasicDriver{
 			e.printStackTrace();
 		}
 		
+		/*
+		 *check状态筛选
+		 */
 		for(int j=2;j>=0;j--){
-			itemskupage.filter(j).click(); //筛选按钮点击
+			itemskupage.filterCheck(j);
+		}
+		itemskupage.filterStatus();//check状态筛选文案
+		itemskupage.listCheck();//check商品列表数量
+		
+		//从excel里取name
+		try{
+			List<String> name_list = excelbook.readName("/Users/zhouxin/Documents/workspace/mis/list.xls");
+			int name_size = name_list.size();
+			for(int k=0;k<name_size;k++){
+				String name = name_list.get(k);
+				itemskupage.itemSearchCheck(name);//check商品列表搜索
+			}
+		}
+		catch(Exception e){
+			e.printStackTrace();
 		}
 
-		itemskupage.filterCheck(); //检查筛选文案
-		itemskupage.listCheck();//检查商品列表数量
-		itemskupage.itemSearchCheck("统一芒果多2L/瓶");//商品列表搜索检查	
+		/*
+		 *check分类筛选
+		 */
+		itemskupage.category().click();//分类筛选点击
+		itemskupage.moveToCategory();//鼠标移动到一级分类
+		itemskupage.categoryCheck();//check二级分类筛选			
 	}
 	
 }

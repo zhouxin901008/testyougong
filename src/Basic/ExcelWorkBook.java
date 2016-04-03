@@ -15,7 +15,7 @@ public class ExcelWorkBook {
 	//通过Workbook方式来读取excel
 	Workbook book;
 	String item_id;
-	String password;
+	String name;
 	/*
 	 * 获取excel文件第一列的值，这里取得值为sku_id
 	 */
@@ -46,22 +46,22 @@ public class ExcelWorkBook {
 		return skuList;
 	}
 	/*
-	 * 获取excel文件第二列的值，这里取得值为password
+	 * 获取excel文件第四列的值，这里取得值为name
 	 */
-	public List<String> readPassword(String sourceString) throws IOException,Exception{
-		List<String> passList = new ArrayList<String>();
+	public List<String> readName(String sourceString) throws IOException,Exception{
+		List<String> nameList = new ArrayList<String>();
 		try {
 			Workbook book =Workbook.getWorkbook(new File(sourceString));
 			Sheet sheet=book.getSheet(0);
 			int rows=sheet.getRows();
 			for(int z=1;z<rows ;z++){
-				String password=sheet.getCell(1,z).getContents();
-				passList.add(password);
+				String name=sheet.getCell(3,z).getContents();
+				nameList.add(name);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return passList;
+		return nameList;
 	}
 	public List<String> getList(){
 		return list;
