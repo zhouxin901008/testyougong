@@ -56,7 +56,6 @@ public class ItemSkuTest extends BasicDriver{
 
 		itemskupage.filterCheck(); //检查筛选文案
 		itemskupage.listCheck();//检查商品列表数量
-		
 		itemskupage.itemSearchCheck("统一芒果多2L/瓶");//商品列表搜索检查	
 	}
 	

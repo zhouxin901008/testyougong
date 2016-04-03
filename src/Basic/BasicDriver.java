@@ -2,8 +2,6 @@ package Basic;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.WebDriver.Navigation;
-import org.openqa.selenium.firefox.FirefoxDriver;
-
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
