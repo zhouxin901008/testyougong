@@ -2,33 +2,36 @@ package Basic;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.WebDriver.Navigation;
+
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.NoSuchElementException;
-
-import org.testng.Assert;
 import org.apache.commons.io.FileUtils;
 
 
-public class BasicDriver{
-	
+public class BasicDriver extends properties{
+	public BasicDriver() throws IOException {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public static WebDriver driver;
-	public static  Navigation navigation;	
+	public static Navigation navigation;
 	
 	//启动浏览器进入指定网址，最大化浏览器
 	public static void open() throws InterruptedException{
-		navigation.to("http://dev.market-mis.dev.lsh123.com");
+		navigation.to(url);
 		driver.manage().window().maximize();
-		
 	}
+	
 	//登录
 	public static void login() throws InterruptedException{
-		driver.findElement(By.name("email")).sendKeys("admin@lsh123.com");
-		WebElement password = driver.findElement(By.name("pwd"));
-		password.sendKeys("654321");
-		password.submit();
+		driver.findElement(By.name("email")).sendKeys(email);
+		WebElement pw = driver.findElement(By.name("pwd"));
+		pw.sendKeys("" + password);
+		pw.submit();
 		Thread.sleep(1000);
 	}
 	
@@ -66,22 +69,6 @@ public class BasicDriver{
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 		return dateFormat.format(date);
 	}
-	
-	//输入文案
-	public static void sendKeys(By by,String keys){	
-		driver.findElement(by).sendKeys(keys);
-	}
-	
-	//点击
-	public static void click(By by){	
-		WebElement c = driver.findElement(by);
-		if(c!=null){
-			c.click();
-		}
-		else
-			Assert.fail("没有找到该元素");
-	}
-
 
 	//获得某元素的文本描述信息
 	public static String getElementText(By by){

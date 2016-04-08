@@ -7,6 +7,7 @@
     <!-- <class name="Basic.Test"/>--> 
      <class name="com.mis.market.test.ItemSkuTest"/>
      <class name="com.mis.market.test.ItemSaleTest"/>
+     <class name="com.mis.market.test.MisHomecatTest"/>
     </classes>
   </test> <!-- Test -->
    <listeners>

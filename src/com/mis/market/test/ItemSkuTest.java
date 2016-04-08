@@ -1,5 +1,6 @@
 package com.mis.market.test;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -14,6 +15,11 @@ import Basic.BasicDriver;
 import Basic.ExcelWorkBook;
 
 public class ItemSkuTest extends BasicDriver{
+	public ItemSkuTest() throws IOException {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	@BeforeClass
 	public void setUp() throws Exception{
 		//System.setProperty("webdriver.chrome.driver", "/Users/zhouxin/Desktop/chromedriver"); 
@@ -25,10 +31,11 @@ public class ItemSkuTest extends BasicDriver{
 	@AfterClass
 	public void tearDown() throws Exception {
 		driver.quit();
+		System.out.println("ItemSku页面测试结束");
 	}
 	
 	@Test
-	public static void itemSkuTest() throws InterruptedException{
+	public static void itemSkuTest() throws Exception{
 		BasicDriver.open();
 		BasicDriver.login();
 		

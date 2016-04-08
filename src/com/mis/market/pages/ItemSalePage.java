@@ -15,18 +15,21 @@ public class ItemSalePage{
 		public ItemSalePage(WebDriver driver){
 			this.driver = driver; 
 		}
+		
 		//销售管理按钮
 		public WebElement sale_btn() throws InterruptedException{
 			element = driver.findElement(By.linkText("销售管理"));
 			Thread.sleep(1000);
 			return element;
 		}
+		
 		//筛选
 		public WebElement filter(int n) throws InterruptedException{
 			element = driver.findElement(By.xpath("//li[@data-value="+n+"]"));
 			Thread.sleep(1000);
 			return element;
 		}
+		
 		//筛选文案检查
 		public void filterCheck(){
 			Assert.assertTrue("'所有'筛选文案错误", driver.findElement(By.xpath("//li[@data-value='0']")).getText().contains("所有"));
@@ -35,10 +38,26 @@ public class ItemSalePage{
 			Assert.assertTrue("'上架'筛选文案错误", driver.findElement(By.xpath("//li[@data-value='2']")).getText().contains("上架"));			
 			Assert.assertTrue("'价格异常'筛选文案错误", driver.findElement(By.xpath("//li[@data-value='4']")).getText().contains("价格异常"));
 		}
+		
 		//销售列表数量检查
 		public void listCheck(){
 			List<WebElement> sale_list= driver.findElements(By.linkText("查看"));
 			Assert.assertEquals(12,sale_list.size());
+		}
+		
+		//搜索检查
+		public void saleSearchCheck(String sale_id) throws InterruptedException{
+			driver.findElement(By.xpath("//input[@class='field-control search-item']")).sendKeys(sale_id);
+			driver.findElement(By.xpath("//button[@class='btn btn-primary']")).click();
+			Thread.sleep(1000);
+			Assert.assertEquals(sale_id,driver.findElement(By.xpath("//html/body/div[1]/div[2]/div/div/div[5]/div/div[1]/table/tbody/tr/td[3]")).getText());
+			driver.findElement(By.linkText("查看")).click();
+			Thread.sleep(1000);
+			Assert.assertEquals(sale_id,driver.findElements(By.xpath("//input[@class='field-control']")).get(2).getAttribute("value"));
+			driver.navigate().back();
+			Thread.sleep(1000);
+			driver.findElement(By.xpath("//button[@class='btn btn-link search-reset']")).click();//返回所有搜索结果
+			Thread.sleep(1000);
 		}
 		
 		

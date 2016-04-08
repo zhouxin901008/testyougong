@@ -15,6 +15,7 @@ public class ExcelWorkBook {
 	//通过Workbook方式来读取excel
 	Workbook book;
 	String item_id;
+	String sale_id;
 	String name;
 	/*
 	 * 获取excel文件第一列的值，这里取得值为sku_id
@@ -45,6 +46,26 @@ public class ExcelWorkBook {
 		//把获取的值放回出去，方便调用
 		return skuList;
 	}
+	
+	/*
+	 * 获取excel文件第二列的值，这里取得值为sale_id
+	 */
+	public List<String> readSaleId(String sourceString) throws IOException,Exception{
+		List<String> saleList = new ArrayList<String>();
+		try {
+			Workbook book =Workbook.getWorkbook(new File(sourceString));
+			Sheet sheet=book.getSheet(0);
+			int rows=sheet.getRows();
+			for(int z=1;z<rows ;z++){
+				String sale_id=sheet.getCell(1,z).getContents();
+				saleList.add(sale_id);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return saleList;
+	}
+	
 	/*
 	 * 获取excel文件第四列的值，这里取得值为name
 	 */
