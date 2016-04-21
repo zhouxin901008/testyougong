@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="22.208">
+           time="23.134">
   <properties />
   
   
-            <testcase name="itemSaleTest" time="22.208" classname="com.mis.market.test.ItemSaleTest" />
+            <testcase name="itemSaleTest" time="23.134" classname="com.mis.market.test.ItemSaleTest" />
       
 </testsuite>

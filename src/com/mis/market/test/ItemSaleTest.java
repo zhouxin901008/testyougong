@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -64,5 +65,12 @@ public class ItemSaleTest extends BasicDriver{
 		}catch(Exception e){
 			e.printStackTrace();
 		}
+		
+		itemsalepage.edit_btn().click();
+		itemsalepage.cancel_btn().click();
+		itemsalepage.edit_btn().click();
+		itemsalepage.save_btn().click();
+		itemsalepage.alert_check();//check详情保存
+		
 	}
 }
