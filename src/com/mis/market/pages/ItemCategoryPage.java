@@ -3,6 +3,8 @@ package com.mis.market.pages;
 import java.util.ArrayList;
 import java.util.List;
 
+import junit.framework.Assert;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -25,6 +27,13 @@ public class ItemCategoryPage {
 	public void filterCheck(int n) throws InterruptedException{
 		driver.findElement(By.xpath("//li[@data-value="+n+"]")).click();
 		List<WebElement> list= driver.findElements(By.linkText("查看"));
+		//验证筛选出来的数量和实际数量是否一致
+		String text = driver.findElement(By.xpath("//li[@data-value="+n+"]")).getText();
+		StringBuffer strb = new StringBuffer(text);
+		String sta_count = text.substring(3,strb.length()-1);
+		int sta_counts = Integer.parseInt(sta_count);
+		Assert.assertEquals(sta_counts, list.size());
+		//验证筛选的状态是否正确
 		ArrayList<String> status_list = new ArrayList<String>();
 		for(int m=1;m<=list.size();m++){
 			String status = driver.findElement(By.xpath("//html/body/div[1]/div[2]/div/div/div[4]/table/tbody/tr["+m+"]/td[6]")).getText();
@@ -32,32 +41,26 @@ public class ItemCategoryPage {
 		}
 		if(n == 2){
 			for(String sta:status_list){
-				if(sta.equals("下架")){	
-				}
-				else{
+				if(sta.equals("上架")){
 					System.out.println("'下架'筛选错误");
 				}
 			}
 		}
-		if(n == 0){
+		else if(n == 0){
 			for(String sta:status_list){
-				if(sta.equals("上架")){	
-				}
-				else{
+				if(sta.equals("下架")){	
 					System.out.println("'上架'筛选错误");
 				}
 			}
 		}
-		if(n == -1){
+		else if(n == -1){
 			for(String sta:status_list){
 				if(sta.equals("上架") || sta.equals("下架")){	
-				}
-				else{
+				}else{
 					System.out.println("'全部'筛选错误");
 				}
 			}
-		}	
-		
+		}			
 	}
 	
 	//添加分类

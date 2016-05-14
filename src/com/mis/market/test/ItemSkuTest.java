@@ -52,8 +52,7 @@ public class ItemSkuTest extends BasicDriver{
 				String item_id = sku_list.get(i);
 				itemskupage.insertSearchCheck(item_id);//check新增商品搜索
 			}
-		}
-		catch(Exception e){
+		}catch(Exception e){
 			e.printStackTrace();
 		}
 		
@@ -74,8 +73,7 @@ public class ItemSkuTest extends BasicDriver{
 				String name = name_list.get(k);
 				itemskupage.itemSearchCheck(name);//check商品列表搜索
 			}
-		}
-		catch(Exception e){
+		}catch(Exception e){
 			e.printStackTrace();
 		}
 

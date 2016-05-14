@@ -46,8 +46,7 @@ public class ItemSkuPage{
 		String listText =  driver.findElement(By.xpath("//html/body/div[1]/div[2]/div/div/div[5]/div/div[1]/table/tbody/tr[1]/td[5]")).getText();
 		if(text.contains("所有")){
 			Assert.assertTrue("'所有'筛选错误",listText.equals("已编辑") || listText.equals("新建"));
-		}
-		else{
+		}else{
 			Assert.assertTrue(text+"筛选错误",text.contains(listText));	
 		}
 		Thread.sleep(1000);

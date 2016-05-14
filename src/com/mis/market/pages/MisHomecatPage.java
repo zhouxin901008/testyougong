@@ -16,7 +16,7 @@ public class MisHomecatPage {
 	
 	//mis模块
 	public WebElement mis() throws InterruptedException{
-		element = driver.findElements(By.xpath("//div[@class='title']")).get(5);
+		element = driver.findElements(By.xpath("//div[@class='title']")).get(6);
 		Thread.sleep(1000);
 		return element;
 	}

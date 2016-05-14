@@ -67,6 +67,13 @@ public class ItemSaleTest extends BasicDriver{
 		}
 		
 		itemsalepage.edit_btn().click();
+		itemsalepage.editSalePriceNormal();//编辑价格(正常价格)
+		itemsalepage.editSalePriceException();//编辑价格(异常价格,确认更改)
+		itemsalepage.editSalePriceExceptionEdit();//编辑价格(异常价格,编辑)
+		
+		/*各种保存、取消、编辑按钮的校验
+		 */
+		itemsalepage.edit_btn().click();
 		itemsalepage.cancel_btn().click();
 		itemsalepage.edit_btn().click();
 		itemsalepage.save_btn().click();
