@@ -96,4 +96,11 @@ public class MisHomegalleryPage {
 		Assert.assertEquals("保存成功!", alert.getText());
 		alert.accept();
 	}
+	
+	//删除banner
+	public WebElement delete_banner(){
+		List<WebElement> btn_list = driver.findElements(By.xpath("//button[@class='btn btn-primary actions']"));
+		element = driver.findElements(By.xpath("//button[@class='btn btn-primary actions']")).get(btn_list.size()-1);
+		return element;
+	}
 }

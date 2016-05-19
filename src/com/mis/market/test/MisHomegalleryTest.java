@@ -49,10 +49,15 @@ public class MisHomegalleryTest extends BasicDriver{
 		 * 第八个数为本地图片路径
 		 * */
 		mhp.insert_banner(1,3,2,3,100446,460212,"http://qa.market-h5.dev.lsh123.com/static/home/special/notice20160314/index.html","/Users/zhouxin/Desktop/11475200908374e48ao.jpg");
-		//保存
-		mhp.save_btn().click();
-		//保存成功
-		mhp.save_success();
+		mhp.save_btn().click();//保存banner
+		mhp.save_success();//保存成功提示
+		
+		/*删除banner
+		 * */
+		mhp.delete_banner().click();//删除banner
+		Thread.sleep(2000);
+		mhp.save_btn().click();//保存banner
+		mhp.save_success();//保存成功提示
 	}
 	
 }

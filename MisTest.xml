@@ -9,6 +9,7 @@
      <class name="com.mis.market.test.ItemSaleTest"/>
      <class name="com.mis.market.test.ItemExceptionTest"/>
      <class name="com.mis.market.test.ItemCategoryTest"/>
+     <class name="com.mis.market.test.MisHomegalleryTest"/>
      <class name="com.mis.market.test.MisHomecatTest"/>
     </classes>
   </test> <!-- Test -->
