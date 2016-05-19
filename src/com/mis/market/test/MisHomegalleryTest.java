@@ -55,7 +55,6 @@ public class MisHomegalleryTest extends BasicDriver{
 		/*删除banner
 		 * */
 		mhp.delete_banner().click();//删除banner
-		Thread.sleep(2000);
 		mhp.save_btn().click();//保存banner
 		mhp.save_success();//保存成功提示
 	}

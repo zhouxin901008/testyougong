@@ -2,6 +2,8 @@ package com.mis.market.pages;
 
 import java.util.List;
 
+import org.junit.Assert;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -40,9 +42,44 @@ public class MisHomecatPage {
 		return null;
 	}
 	
-	//添加
-	public WebElement homecatInsert(){
+	//添加按钮
+	public WebElement btn_insert(){
 		element = driver.findElement(By.xpath("//button[@class='add btn btn-primary btn-lg']"));
+		return element;
+	}
+	
+	//添加品类推荐
+	public void insertHomecat(String cat_name,String cat_id,String picture){
+		List<WebElement> homecat_list = driver.findElements(By.name("cat_name"));
+		//填写分类名称和分类id
+		driver.findElements(By.name("cat_name")).get(homecat_list.size()-1).sendKeys(cat_name);
+		driver.findElements(By.name("cat_id")).get(homecat_list.size()-1).sendKeys(cat_id);
+		//上传图片
+		WebElement upload =driver.findElements(By.name("fileUp")).get(homecat_list.size()-1);
+		upload.sendKeys(picture);
+		//开关置为on
+		List<WebElement> switch_list = driver.findElements(By.xpath("//span[@class='bootstrap-switch-handle-off bootstrap-switch-default']"));
+		System.out.println(switch_list);
+		driver.findElements(By.xpath("//span[@class='bootstrap-switch-handle-off bootstrap-switch-default']")).get(switch_list.size()-1).click();	
+	}
+	
+	//保存按钮
+	public WebElement btn_save(){
+		element = driver.findElement(By.xpath("//button[@class='submit btn btn-primary']"));
+		return element;
+	}
+	
+	//保存成功
+	public void save_success(){
+		Alert alert = driver.switchTo().alert();
+		Assert.assertEquals("保存成功!", alert.getText());
+		alert.accept();
+	}
+	
+	//删除品类推荐
+	public WebElement delete_cat(){
+		List<WebElement> btn_list = driver.findElements(By.xpath("//button[@class='btn btn-primary actions']"));
+		element = driver.findElements(By.xpath("//button[@class='btn btn-primary actions']")).get(btn_list.size()-1);
 		return element;
 	}
 }
