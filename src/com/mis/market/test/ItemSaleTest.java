@@ -40,18 +40,18 @@ public class ItemSaleTest extends BasicDriver{
 		BasicDriver.open();
 		BasicDriver.login();
 		
-		ItemSalePage itemsalepage = new ItemSalePage(driver);
-		itemsalepage.sale_btn().click(); //销售管理按钮
+		ItemSalePage itemsale = new ItemSalePage(driver);
+		itemsale.sale_btn().click(); //销售管理按钮
 		
 		/*
 		 *check状态筛选
 		 */
 		for(int j=4;j>=0;j--){
-			itemsalepage.filter(j).click(); //筛选按钮点击
+			itemsale.filter(j).click(); //筛选按钮点击
 		}
 
-		itemsalepage.filterCheck();//筛选检查
-		itemsalepage.listCheck();//列表数量检查
+		itemsale.filterCheck();//筛选检查
+		itemsale.listCheck();//列表数量检查
 		
 		//从excel里取sale_id
 		ExcelWorkBook excelbook = new ExcelWorkBook();
@@ -60,24 +60,24 @@ public class ItemSaleTest extends BasicDriver{
 			int sale_size = sale_list.size();
 			for(int i=0;i<sale_size;i++){
 				String sale_id = sale_list.get(i);
-				itemsalepage.saleSearchCheck(sale_id);//check销售列表搜索
+				itemsale.saleSearchCheck(sale_id);//check销售列表搜索
 			}
 		}catch(Exception e){
 			e.printStackTrace();
 		}
 		
-		itemsalepage.edit_btn().click();
-		itemsalepage.editSalePriceNormal();//编辑价格(正常价格)
-		itemsalepage.editSalePriceException();//编辑价格(异常价格,确认更改)
-		itemsalepage.editSalePriceExceptionEdit();//编辑价格(异常价格,编辑)
+		itemsale.edit_btn().click();
+		itemsale.editSalePriceNormal();//编辑价格(正常价格)
+		itemsale.editSalePriceException();//编辑价格(异常价格,确认更改)
+		itemsale.editSalePriceExceptionEdit();//编辑价格(异常价格,编辑)
 		
 		/*各种保存、取消、编辑按钮的校验
 		 */
-		itemsalepage.edit_btn().click();
-		itemsalepage.cancel_btn().click();
-		itemsalepage.edit_btn().click();
-		itemsalepage.save_btn().click();
-		itemsalepage.alert_check();//check详情保存
+		itemsale.edit_btn().click();
+		itemsale.cancel_btn().click();
+		itemsale.edit_btn().click();
+		itemsale.save_btn().click();
+		itemsale.alert_check();//check详情保存
 		
 	}
 }

@@ -35,10 +35,10 @@ public class MisHomegalleryTest extends BasicDriver{
 		BasicDriver.open();
 		BasicDriver.login();
 		
-		MisHomegalleryPage mhp = new MisHomegalleryPage(driver);
-		mhp.mis().click();//点击mis
-		mhp.homegallery().click();//点击banner模块
-		mhp.insert_btn().click();//添加按钮
+		MisHomegalleryPage homegallery = new MisHomegalleryPage(driver);
+		homegallery.mis().click();//点击mis
+		homegallery.homegallery().click();//点击banner模块
+		homegallery.insert_btn().click();//添加按钮
 		/*添加banner
 		 * 前两个数为开始时间和结束时间中日历的列数
 		 * 第三个数为banner类型,1为轮播图，2为活动栏
@@ -48,15 +48,15 @@ public class MisHomegalleryTest extends BasicDriver{
 		 * 第七个数为公告地址
 		 * 第八个数为本地图片路径
 		 * */
-		mhp.insert_banner(1,3,2,3,100446,460212,"http://qa.market-h5.dev.lsh123.com/static/home/special/notice20160314/index.html","/Users/zhouxin/Desktop/11475200908374e48ao.jpg");
-		mhp.save_btn().click();//保存banner
-		mhp.save_success();//保存成功提示
+		homegallery.insert_banner(1,3,2,3,100446,460212,"http://qa.market-h5.dev.lsh123.com/static/home/special/notice20160314/index.html","/Users/zhouxin/Desktop/11475200908374e48ao.jpg");
+		homegallery.save_btn().click();//保存banner
+		homegallery.save_success();//保存成功提示
 		
 		/*删除banner
 		 * */
-		mhp.delete_banner().click();//删除banner
-		mhp.save_btn().click();//保存banner
-		mhp.save_success();//保存成功提示
+		homegallery.delete_banner().click();//删除banner
+		homegallery.save_btn().click();//保存banner
+		homegallery.save_success();//保存成功提示
 	}
 	
 }

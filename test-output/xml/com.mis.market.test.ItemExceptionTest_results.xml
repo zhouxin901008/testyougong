@@ -4,17 +4,17 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="23.005">
+           time="91.475">
   <properties />
-            <testcase name="itemExceptionTest" time="23.005" classname="com.mis.market.test.ItemExceptionTest">
+            <testcase name="itemExceptionTest" time="91.475" classname="com.mis.market.test.ItemExceptionTest">
                 <failure type="java.lang.AssertionError"
-                  message="&apos;所有&apos;筛选错误"
+                  message="正常(新品试销) 筛选错误"
               >
-<![CDATA[java.lang.AssertionError: '所有'筛选错误
+<![CDATA[java.lang.AssertionError: 正常(新品试销) 筛选错误
   org.junit.Assert.fail(Assert.java:88)
   org.junit.Assert.assertTrue(Assert.java:41)
-  com.mis.market.pages.ItemExceptionPage.filterCheck(ItemExceptionPage.java:31)
-  com.mis.market.test.ItemExceptionTest.itemExceptionTest(ItemExceptionTest.java:44)
+  com.mis.market.pages.ItemExceptionPage.wmstatusCheck(ItemExceptionPage.java:51)
+  com.mis.market.test.ItemExceptionTest.itemExceptionTest(ItemExceptionTest.java:48)
   sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
   sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

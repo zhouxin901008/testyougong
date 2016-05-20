@@ -59,7 +59,6 @@ public class MisHomecatPage {
 		upload.sendKeys(picture);
 		//开关置为on
 		List<WebElement> switch_list = driver.findElements(By.xpath("//span[@class='bootstrap-switch-handle-off bootstrap-switch-default']"));
-		System.out.println(switch_list);
 		driver.findElements(By.xpath("//span[@class='bootstrap-switch-handle-off bootstrap-switch-default']")).get(switch_list.size()-1).click();	
 	}
 	

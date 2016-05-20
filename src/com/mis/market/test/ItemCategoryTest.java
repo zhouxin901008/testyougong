@@ -37,24 +37,24 @@ public class ItemCategoryTest extends BasicDriver{
 		BasicDriver.open();
 		BasicDriver.login();
 		
-		ItemCategoryPage icp = new ItemCategoryPage(driver);
-		icp.category_btn().click();//进入品类管理页面
+		ItemCategoryPage itemcategory = new ItemCategoryPage(driver);
+		itemcategory.category_btn().click();//进入品类管理页面
 		//check筛选
-		icp.filterCheck(2);
-		icp.filterCheck(0);
-		icp.filterCheck(-1);
+		itemcategory.filterCheck(2);
+		itemcategory.filterCheck(0);
+		itemcategory.filterCheck(-1);
 		
-		icp.insert_btn().click();//添加一级分类
-		icp.cancel_btn().click();//取消
-		icp.view_btn().click();//查看一级分类
-		icp.insert_btn().click();//添加二级分类
-		icp.cancel_btn().click();//取消
-		icp.edit_btn().click();//编辑一级分类
-		icp.cancel_btn().click();//取消
+		itemcategory.insert_btn().click();//添加一级分类
+		itemcategory.cancel_btn().click();//取消
+		itemcategory.view_btn().click();//查看一级分类
+		itemcategory.insert_btn().click();//添加二级分类
+		itemcategory.cancel_btn().click();//取消
+		itemcategory.edit_btn().click();//编辑一级分类
+		itemcategory.cancel_btn().click();//取消
 		
-		icp.view_btn().click();//查看二级分类
-		icp.edit_btn().click();//编辑二级分类
-		icp.cancel_btn().click();//取消
+		itemcategory.view_btn().click();//查看二级分类
+		itemcategory.edit_btn().click();//编辑二级分类
+		itemcategory.cancel_btn().click();//取消
 		
 	}
 }
