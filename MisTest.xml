@@ -11,6 +11,7 @@
      <class name="com.mis.market.test.ItemCategoryTest"/>
      <class name="com.mis.market.test.MisHomegalleryTest"/>
      <class name="com.mis.market.test.MisHomecatTest"/>
+     <class name="com.mis.market.test.MisHomeitemTest"/>
     </classes>
   </test> <!-- Test -->
    <listeners>
