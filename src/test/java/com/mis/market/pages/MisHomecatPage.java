@@ -30,15 +30,15 @@ public class MisHomecatPage {
 	}
 	
 	//check品类推荐list
-	public WebElement homecatCheck(String name){
-		List<WebElement> list = driver.findElements(By.name("cat_name"));
+	public WebElement homecatCheck(String id){
+		List<WebElement> list = driver.findElements(By.name("cat_id"));
 		for(WebElement element:list){
-			if(element.getAttribute("value").equals(name)){
+			if(element.getAttribute("value").equals(id)){
 				//System.out.println("存在名称为：" + name + " 的品类");
 				return element;
 			}
 		}
-		System.out.println("不存在名称为：" + name + " 的品类");
+		System.out.println("不存在名称为：" + id + " 的品类");
 		return null;
 	}
 	
