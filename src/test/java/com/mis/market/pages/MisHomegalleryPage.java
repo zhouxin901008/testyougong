@@ -78,6 +78,7 @@ public class MisHomegalleryPage {
 		//上传图片
 		WebElement upload =driver.findElements(By.name("fileUp")).get(banner_list.size()-1);
 		upload.sendKeys(picture);
+		Thread.sleep(1000);
 		//开关置为on
 		List<WebElement> switch_list = driver.findElements(By.xpath("//span[@class='bootstrap-switch-handle-off bootstrap-switch-default']"));
 		driver.findElements(By.xpath("//span[@class='bootstrap-switch-handle-off bootstrap-switch-default']")).get(switch_list.size()-1).click();

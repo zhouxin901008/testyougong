@@ -4,25 +4,25 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="36.840">
+           time="36.833">
   <properties />
-            <testcase name="misHomegalleryTest" time="36.840" classname="com.mis.market.test.MisHomegalleryTest">
+            <testcase name="misHomegalleryTest" time="36.833" classname="com.mis.market.test.MisHomegalleryTest">
                 <failure type="org.openqa.selenium.ElementNotVisibleException"
                   message="Element is not currently visible and so may not be interacted with
-Command duration or timeout: 30.13 seconds
+Command duration or timeout: 30.08 seconds
 Build info: version: &apos;2.45.0&apos;, revision: &apos;5017cb8e7ca8e37638dc3091b2440b90a1d8686f&apos;, time: &apos;2015-02-27 09:10:26&apos;
 System info: host: &apos;localhost&apos;, ip: &apos;127.0.0.1&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_40&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=41.0.1, platform=MAC, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: ed68ab7e-aef3-ab4b-845f-48a89d4744c3"
+Session ID: 35c2c2d1-7a43-ea4f-af1b-bf222c9e0dea"
               >
 <![CDATA[org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
-Command duration or timeout: 30.13 seconds
+Command duration or timeout: 30.08 seconds
 Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
 System info: host: 'localhost', ip: '127.0.0.1', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.8.0_40'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=41.0.1, platform=MAC, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: ed68ab7e-aef3-ab4b-845f-48a89d4744c3
+Session ID: 35c2c2d1-7a43-ea4f-af1b-bf222c9e0dea
   sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
   sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
   sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -68,10 +68,10 @@ Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not curren
 Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
 System info: host: 'localhost', ip: '127.0.0.1', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.8.0_40'
 Driver info: driver.version: unknown
-  <anonymous class>.fxdriver.preconditions.visible(file:///var/folders/0j/qv5k6dvd2579d1zr60mbkr980000gn/T/anonymous5341732397084892660webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9587)
-  <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///var/folders/0j/qv5k6dvd2579d1zr60mbkr980000gn/T/anonymous5341732397084892660webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12257)
-  <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///var/folders/0j/qv5k6dvd2579d1zr60mbkr980000gn/T/anonymous5341732397084892660webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12274)
-  <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///var/folders/0j/qv5k6dvd2579d1zr60mbkr980000gn/T/anonymous5341732397084892660webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:603)
+  <anonymous class>.fxdriver.preconditions.visible(file:///var/folders/0j/qv5k6dvd2579d1zr60mbkr980000gn/T/anonymous3982178040117939010webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9587)
+  <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///var/folders/0j/qv5k6dvd2579d1zr60mbkr980000gn/T/anonymous3982178040117939010webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12257)
+  <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///var/folders/0j/qv5k6dvd2579d1zr60mbkr980000gn/T/anonymous3982178040117939010webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12274)
+  <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///var/folders/0j/qv5k6dvd2579d1zr60mbkr980000gn/T/anonymous3982178040117939010webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:603)
 ]]>
       </failure>
 
