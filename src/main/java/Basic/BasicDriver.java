@@ -100,6 +100,6 @@ public class BasicDriver extends properties{
 			element.sendKeys(text);
 	}
 
-	
-	
+
+
 }

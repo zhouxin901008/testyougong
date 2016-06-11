@@ -39,8 +39,10 @@ public class MisHomeitemTest extends BasicDriver{
 		BasicDriver.login();
 		
 		MisHomeitemPage  homeitem = new MisHomeitemPage(driver);
-		homeitem.mis().click();
-		homeitem.homeitem().click();
+		homeitem.mis().click();//展开mis模块
+		homeitem.homeitem().click();//进入单品推荐页
+		homeitem.insert_btn().click();//点击添加那妞
+		homeitem.insert_item();//添加商品
 
 	}
 }

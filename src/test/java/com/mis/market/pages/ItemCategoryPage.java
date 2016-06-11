@@ -14,7 +14,7 @@ public class ItemCategoryPage {
 	private WebDriver driver = null;
 
 	public ItemCategoryPage(WebDriver driver){
-		this.driver = driver; 
+		this.driver = driver;
 	}
 	
 	//品类管理入口

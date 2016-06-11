@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="MisTest"
+<testsuite name="Command line test"
            tests="1"
            failures="0"
            errors="0"
            skipped="0"
-           time="25.254">
+           time="34.123">
   <properties />
   
   
-            <testcase name="itemSkuTest" time="25.254" classname="com.mis.market.test.ItemSkuTest" />
+            <testcase name="itemSkuTest" time="34.123" classname="com.mis.market.test.ItemSkuTest" />
       
 </testsuite>

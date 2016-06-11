@@ -14,7 +14,7 @@ public class ItemSkuPage{
 	private WebDriver driver = null;
 
 	public ItemSkuPage(WebDriver driver){
-		this.driver = driver; 
+        this.driver = driver;
 	}
 	
 	//添加商品按钮
@@ -47,7 +47,7 @@ public class ItemSkuPage{
 		if(text.contains("所有")){
 			Assert.assertTrue("'所有'筛选错误",listText.equals("已编辑") || listText.equals("新建"));
 		}else{
-			Assert.assertTrue(text+"筛选错误",text.contains(listText));	
+			Assert.assertTrue(text+"筛选错误",text.contains(listText));
 		}
 		Thread.sleep(1000);
 	}

@@ -12,7 +12,7 @@ public class ItemExceptionPage {
 	private WebDriver driver = null;
 
 	public ItemExceptionPage(WebDriver driver){
-		this.driver = driver; 
+		this.driver = driver;
 	}
 	
 	//在售异常商品按钮

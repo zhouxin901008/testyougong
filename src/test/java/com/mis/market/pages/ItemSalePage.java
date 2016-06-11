@@ -19,7 +19,7 @@ public class ItemSalePage{
 	private WebDriver driver = null;
 		
 	public ItemSalePage(WebDriver driver){
-		this.driver = driver; 
+        this.driver = driver;
 	}
 		
 	//销售管理按钮
