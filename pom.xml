@@ -14,6 +14,8 @@
  
 	<!-- maven 参数配置，这里引用不同的testng.xml -->
 	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<xmlFileName>MisTest.xml</xmlFileName>
 	</properties>
