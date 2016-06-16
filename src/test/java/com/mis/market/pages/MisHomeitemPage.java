@@ -48,7 +48,7 @@ public class MisHomeitemPage {
         Thread.sleep(500);
         String name = driver.findElement(By.xpath("//tr[@class=' tpl-filter-promo-invalid']/td[2]")).getText();
         driver.findElement(By.xpath("//tr[@class=' tpl-filter-promo-invalid']/td[7]/a[@class='act-additem']")).click();
-        driver.switchTo().alert().dismiss();//现在是取消,回头改成确定
+        driver.switchTo().alert().accept();//现在是取消,回头改成确定
         bd.windows(0);//返回原窗口
         driver.navigate().refresh();//刷新页面
         List<WebElement> list = driver.findElements(By.linkText("查看"));

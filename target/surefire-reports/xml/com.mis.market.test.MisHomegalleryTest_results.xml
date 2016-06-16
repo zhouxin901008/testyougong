@@ -1,82 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="MisTest"
            tests="1"
-           failures="1"
+           failures="0"
            errors="0"
            skipped="0"
-           time="36.833">
+           time="18.463">
   <properties />
-            <testcase name="misHomegalleryTest" time="36.833" classname="com.mis.market.test.MisHomegalleryTest">
-                <failure type="org.openqa.selenium.ElementNotVisibleException"
-                  message="Element is not currently visible and so may not be interacted with
-Command duration or timeout: 30.08 seconds
-Build info: version: &apos;2.45.0&apos;, revision: &apos;5017cb8e7ca8e37638dc3091b2440b90a1d8686f&apos;, time: &apos;2015-02-27 09:10:26&apos;
-System info: host: &apos;localhost&apos;, ip: &apos;127.0.0.1&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.10.5&apos;, java.version: &apos;1.8.0_40&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=41.0.1, platform=MAC, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 35c2c2d1-7a43-ea4f-af1b-bf222c9e0dea"
-              >
-<![CDATA[org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
-Command duration or timeout: 30.08 seconds
-Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
-System info: host: 'localhost', ip: '127.0.0.1', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.8.0_40'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=41.0.1, platform=MAC, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 35c2c2d1-7a43-ea4f-af1b-bf222c9e0dea
-  sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-  sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-  sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-  java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-  org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-  org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-  org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-  org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
-  org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:79)
-  com.mis.market.pages.MisHomegalleryPage.insert_banner(MisHomegalleryPage.java:46)
-  com.mis.market.test.MisHomegalleryTest.misHomegalleryTest(MisHomegalleryTest.java:51)
-  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-  java.lang.reflect.Method.invoke(Method.java:497)
-  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
-  org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
-  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
-  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
-  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-  org.testng.TestRunner.privateRun(TestRunner.java:782)
-  org.testng.TestRunner.run(TestRunner.java:632)
-  org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-  org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-  org.testng.SuiteRunner.run(SuiteRunner.java:268)
-  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-  org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-  org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-  org.testng.TestNG.run(TestNG.java:1064)
-  org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:74)
-  org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)
-  org.apache.maven.surefire.Surefire.run(Surefire.java:180)
-  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-  java.lang.reflect.Method.invoke(Method.java:497)
-  org.apache.maven.surefire.booter.SurefireBooter.runSuitesInProcess(SurefireBooter.java:350)
-  org.apache.maven.surefire.booter.SurefireBooter.main(SurefireBooter.java:1021)
-Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
-Build info: version: '2.45.0', revision: '5017cb8e7ca8e37638dc3091b2440b90a1d8686f', time: '2015-02-27 09:10:26'
-System info: host: 'localhost', ip: '127.0.0.1', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.5', java.version: '1.8.0_40'
-Driver info: driver.version: unknown
-  <anonymous class>.fxdriver.preconditions.visible(file:///var/folders/0j/qv5k6dvd2579d1zr60mbkr980000gn/T/anonymous3982178040117939010webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9587)
-  <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///var/folders/0j/qv5k6dvd2579d1zr60mbkr980000gn/T/anonymous3982178040117939010webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12257)
-  <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///var/folders/0j/qv5k6dvd2579d1zr60mbkr980000gn/T/anonymous3982178040117939010webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12274)
-  <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///var/folders/0j/qv5k6dvd2579d1zr60mbkr980000gn/T/anonymous3982178040117939010webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:603)
-]]>
-      </failure>
-
-          </testcase>
   
   
-  
+            <testcase name="misHomegalleryTest" time="18.463" classname="com.mis.market.test.MisHomegalleryTest" />
+      
 </testsuite>

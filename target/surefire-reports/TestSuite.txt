@@ -1,4 +1,18 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 39.224 sec
+Tests run: 7, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 292.854 sec <<< FAILURE!
+misHomecatTest(com.mis.market.test.MisHomecatTest)  Time elapsed: 10.193 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[保存成功!]> but was:<[品类推荐不满8个]>
+	at org.junit.Assert.assertEquals(Assert.java:125)
+	at org.junit.Assert.assertEquals(Assert.java:147)
+	at com.mis.market.pages.MisHomecatPage.save_success(MisHomecatPage.java:74)
+	at com.mis.market.test.MisHomecatTest.misHomecatTest(MisHomecatTest.java:58)
+
+misHomeitemTest(com.mis.market.test.MisHomeitemTest)  Time elapsed: 11.754 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<统一[汤达人日式豚骨拉面杯装178g／杯*12]> but was:<统一[芒果多2L/瓶*3]>
+	at org.junit.Assert.assertEquals(Assert.java:125)
+	at org.junit.Assert.assertEquals(Assert.java:147)
+	at com.mis.market.pages.MisHomeitemPage.insert_item(MisHomeitemPage.java:56)
+	at com.mis.market.test.MisHomeitemTest.misHomeitemTest(MisHomeitemTest.java:45)
+
